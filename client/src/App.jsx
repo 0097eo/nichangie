@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './Header/Header';
 import Featured from './Featured/Featured';
 import Card from './Card/Card';
+import Search from './Search/Search';
 
 function App() {
   const [funds, setFunds] = useState([]);
@@ -18,6 +19,7 @@ function App() {
     <>
       <div>
         <Header />
+        <Search />
         <Featured />
         <div className='fund-container'>
           {funds.map(fund => (
