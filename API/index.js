@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const fundraiserRoutes = require('./src/fundraiser/routes')
 const app = express();
 const port = 7000;
@@ -10,6 +11,7 @@ app.get('/', (req, res) => {
 })
 //middlewares
 app.use(express.json())
+app.use(cors())
 
 app.use('/api/v1/fundraisers', fundraiserRoutes)
 

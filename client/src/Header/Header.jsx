@@ -22,7 +22,7 @@ const Header = () => {
         <h2>Fundraising Made Simple</h2>
     <div className='searchbar'>
         <input type='text'
-         placeholder='find fundraiser'
+         placeholder='find a fundraiser'
          value={searchInput}
          onChange={handleChange}
         ></input>
