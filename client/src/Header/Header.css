@@ -1,0 +1,53 @@
+/* Header.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    cursor: pointer;
+}
+
+h2{
+    text-align: center;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 10px auto; 
+  }
+  
+  .searchbar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none; 
+  }
+  
+  .searchbar input[type="text"]:placeholder {
+    color: #999;
+    text-align: center;
+  }
+
+
+
