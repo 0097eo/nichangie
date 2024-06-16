@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Header from '../Header/Header';
 
 const Fundetails = () => {
   const { id } = useParams();
   const [fund, setFund] = useState(null);
 
   useEffect(() => {
-    // Replace with your data fetching logic
     const fetchFundDetails = async () => {
       const response = await fetch(`http://localhost:7000/api/v1/fundraisers/${id}`);
       const data = await response.json();
@@ -23,6 +23,7 @@ const Fundetails = () => {
 
   return (
     <div className='fund-details'>
+      <Header />
       <h2>{fund.name}</h2>
       <p>Description: {fund.description}</p>
       <p>Raised: Kshs {fund.total}</p>
