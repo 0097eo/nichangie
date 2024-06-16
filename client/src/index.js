@@ -12,8 +12,8 @@ const root = createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/fundetails' element={<Fundetails/>}></Route>
       <Route path='/' element={<App/>}></Route>
+      <Route path='/fund/:id' element={<Fundetails/>}></Route>
       <Route path='/about' element={<About/>}></Route>
       <Route path='/newfundraiser' element={<NewFundraiser/>}></Route>
     </Routes>

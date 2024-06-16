@@ -23,11 +23,11 @@ function App() {
         <Featured />
         <div className='fund-container'>
           {funds.map(fund => (
-            <Card key={fund.id} fund={fund} />
+            <Card key={fund.id} fund={fund} id={fund.id} />
           ))}
         </div>
-        <h1>Hello World</h1>
-        <p>This is my fundraiser app</p>
+        <h1>No kugeria mani</h1>
+        <p>Nafaa kueka footer</p>
       </div>
     </>
   );
