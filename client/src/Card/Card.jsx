@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const Card = ({ fund, id }) => {
+const Card = ({ fund, id, deleteFund }) => {
   return (
     <div className='fund-card'>
-      <h3>Fund name: {fund.name}</h3>
-      <p>Description: {fund.description}</p>
+      <h3>{fund.name}</h3>
+      <p>{fund.description}</p>
       <p>Raised:Kshs {fund.total}</p>
-      <p>End date:{new Date(fund.end_date).toLocaleDateString()}</p>
+      <p>Ends On:{new Date(fund.end_date).toLocaleDateString()}</p>
       <Link to={`fund/${id}`}><button>Donate</button></Link>
+      <button onClick={()=>deleteFund(id)}>Close</button>
     </div>
   );
 }

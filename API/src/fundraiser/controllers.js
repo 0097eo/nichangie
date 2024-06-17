@@ -53,10 +53,10 @@ const addNewFund = (req, res) => {
     })
 };
 
-const deleteFundByName = (req, res) => {
-    const name = req.params.name;
+const deleteFundByID = (req, res) => {
+    const id = req.params.id;
 
-    pool.query(queries.deleteFundByName, [name], (error, results) => {
+    pool.query(queries.deleteFundByID, [id], (error, results) => {
         if (error) {
             throw error;
         }
@@ -71,5 +71,5 @@ module.exports = {
     findFundById,
     findFundByName,
     addNewFund,
-    deleteFundByName,
+    deleteFundByID,
 }

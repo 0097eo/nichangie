@@ -15,6 +15,21 @@ function App() {
     });
   }, []);
 
+  const deleteFundraiser = async (id) => {
+    try {
+      await fetch(`http://localhost:7000/api/v1/fundraisers/byid/${id}`, {
+        method: 'DELETE',
+      });
+  
+      // After successfully deleting the fundraiser, filter it out from the state
+      const newFunds = funds.filter((fund) => fund.id!== id);
+      setFunds(newFunds);
+    } catch (error) {
+      console.error("Failed to delete fundraiser:", error);
+    }
+  };
+  
+
   return (
     <>
       <div>
@@ -23,7 +38,7 @@ function App() {
         <Featured />
         <div className='fund-container'>
           {funds.map(fund => (
-            <Card key={fund.id} fund={fund} id={fund.id} />
+            <Card key={fund.id} fund={fund} id={fund.id} deleteFund={deleteFundraiser}/>
           ))}
         </div>
         <h1>No kugeria mani</h1>

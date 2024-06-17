@@ -7,7 +7,7 @@ router.get('/', controller.getFunds)
 router.get('/:id', controller.findFundById)
 router.get('/byname/:name', controller.findFundByName); 
 router.post('/', controller.addNewFund);
-router.delete('/byname/:name', controller.deleteFundByName);
+router.delete('/byid/:id', controller.deleteFundByID);
 
 
 

@@ -10,7 +10,6 @@ const Fundetails = () => {
     const fetchFundDetails = async () => {
       const response = await fetch(`http://localhost:7000/api/v1/fundraisers/${id}`);
       const data = await response.json();
-      console.log(data);
       setFund(data);
     };
 
@@ -24,10 +23,10 @@ const Fundetails = () => {
   return (
     <div className='fund-details'>
       <Header />
-      <h2>{fund.name}</h2>
+      <h3>{fund.name}</h3>
       <p>Description: {fund.description}</p>
       <p>Raised: Kshs {fund.total}</p>
-      <p>End date: {new Date(fund.end_date).toLocaleDateString()}</p>
+      <p>Ends on: {new Date(fund.end_date).toLocaleDateString()}</p>
       <button>Make Donation</button>
     </div>
   );
