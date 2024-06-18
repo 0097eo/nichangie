@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Header from '../Header/Header';
+import './NewFundraiser.css';
 
 const NewFundraiser = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [total, setTotal] = useState('');
   const [end_date, setEndDate] = useState('');
 
   const handleSubmit = async (e) => {
@@ -13,7 +13,7 @@ const NewFundraiser = () => {
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, description, total, end_date }),
+      body: JSON.stringify({ name, description, end_date }),
     };
 
     try {
@@ -23,7 +23,6 @@ const NewFundraiser = () => {
         console.log(data); 
         setName('');
         setDescription('');
-        setTotal('');
         setEndDate('');
         alert('Fundraiser added successfully')
       } else {
@@ -58,15 +57,6 @@ const NewFundraiser = () => {
           required
         ></textarea>
 
-        <label htmlFor="total">Total Amount:</label>
-        <input
-          id="total"
-          type="number"
-          value={total}
-          onChange={(e) => setTotal(e.target.value)}
-          placeholder="Total Amount"
-          required
-        />
 
         <label htmlFor="end_date">End Date:</label>
         <input

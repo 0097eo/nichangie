@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../Header/Header';
+import './Fundetails.css';
 
 const Fundetails = () => {
   const { id } = useParams();
@@ -21,14 +22,17 @@ const Fundetails = () => {
   }
 
   return (
-    <div className='fund-details'>
+    <>
+    
       <Header />
+    <div className='fund-details'>
       <h3>{fund.name}</h3>
       <p>Description: {fund.description}</p>
       <p>Raised: Kshs {fund.total}</p>
       <p>Ends on: {new Date(fund.end_date).toLocaleDateString()}</p>
       <button>Make Donation</button>
     </div>
+    </>
   );
 };
 

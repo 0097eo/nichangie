@@ -6,6 +6,10 @@ const port = 7000;
 
 
 
+
+
+
+
 app.get('/', (req, res) => {
     res.send('Hello World');
 })
@@ -13,6 +17,7 @@ app.get('/', (req, res) => {
 app.use(express.json())
 app.use(cors())
 
+//routes
 app.use('/api/v1/fundraisers', fundraiserRoutes)
 
 app.listen(port, ()=>{

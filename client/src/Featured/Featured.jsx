@@ -1,9 +1,10 @@
 import React from 'react'
+import './Featured.css'
 
 const Featured = () => {
   return (
-    <div>
-        <h2>Featured NIchangie Fundraisers</h2>
+    <div className='featured'>
+        <h2>featured NIchangie fundraisers</h2>
     </div>
   )
 }

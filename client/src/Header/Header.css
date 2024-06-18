@@ -1,4 +1,3 @@
-/* Header.css */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -23,6 +22,11 @@
 
 .navbar ul li {
     cursor: pointer;
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
 }
 
 h2{

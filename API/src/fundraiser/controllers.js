@@ -1,6 +1,8 @@
 const pool = require('../../db')
 const queries = require('./queries')
 
+
+
 const getFunds = (req, res) => {
     pool.query(queries.getFunds, (error, results) => {
         if (error) {
@@ -47,7 +49,7 @@ const addNewFund = (req, res) => {
                 if (error) {
                     throw error;
                 }
-                res.status(201).send(`Fund added with ID: ${results.rows[0].id}`)
+                res.status(201).send(JSON.stringify({ message: `Fund added with ID: ${results.rows[0].id}` }));
             })
         }
     })
@@ -72,4 +74,5 @@ module.exports = {
     findFundByName,
     addNewFund,
     deleteFundByID,
+
 }

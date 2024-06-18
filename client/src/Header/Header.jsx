@@ -23,7 +23,7 @@ const Header = () => {
             </li>
         </ul>
     </nav>
-        <h2>Fundraising Made Simple</h2>
+        <h2>make someone's dreams come true</h2>
     
     </>
   )
